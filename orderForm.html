@@ -1,0 +1,114 @@
+<!-- PHP Forms Examples -->
+<!-- (CC) Michael S. Brown -->
+<!DOCTYPE html>
+<html>
+<style>
+  body {
+    font-family: sans-serif;
+  }
+  .entry {
+    background-color: silver;
+    overflow: hidden;
+    padding: 10px;
+    border: 2px black solid;
+    margin-top: 10px;
+  }
+  .entry img {
+    float:right;
+    height: 200px;
+    margin:10px;
+    border: solid 1px black;
+  }
+  #container {
+    width: 80%;
+    padding: 10px;
+    background-color: LightSkyBlue;
+    margins: auto;
+    border: solid 5px black;
+    font-size: 1.25em;
+  }
+.buttonsize {
+  font-size: 1.5em
+}
+
+  h1 { text-align: center;}
+</style>
+<body>
+<div id="container">
+<h1> Cat Fail Video T-Shirt </h1>
+<div class="entry">
+  <p style="color:blue">
+<img alt="tshirt" src="tshirt.jpg">
+Show your friends how much the Internet means to you with your very own Cat Fail Video T-Shirt.</p>
+</div>
+
+
+<h2> Order Information </h2>
+<form action="orderConfirmation.php" method="get">
+<div class="entry">
+  <p> Shirt color:
+  <select name="color">
+    <option value="White" selected>White</option>
+     <option value="Black">Black</option>
+     <option value="Red">Red</option>
+     <option value="Green">Green</option>
+     <option value="Blue">Blue</option>
+   </select>
+</p>
+
+<p>
+  Shirt Size:
+  <select name="sizeandprice">
+    <option value="Small - $9.99">Small - $9.99</option>
+     <option value="Medium - $10.99">Medium - $10.99</option>
+     <option value="Large - $11.99" selected>Large - $11.99</option>
+     <option value="X-Large - $12.99">X-Large - $12.99</option>
+   </select>
+</p>
+<p>
+  Is this a gift? <input type="checkbox" name="gift" value="on">
+</p>
+
+<p>
+  Write your gift message here: <br>
+  <textarea name="message" rows="5" cols="50"></textarea>
+</p>
+
+</div>
+<h2> Payment Information </h2>
+<div class="entry">
+  <p> Card type </p>
+  <p>
+  <input type="hidden" name="cardtype" value="No card has been selected" selected>
+  Visa  <input type="radio" name="cardtype" value="visa">
+  Mastercard  <input type="radio" name="cardtype" value="Mastercard">
+  Discover <input type="radio" name="cardtype" value="Discover">
+
+  </p>
+
+  <p>
+    Name on Credit card <br>
+    <input type="text" name="name" maxlength="40" size="70%">
+  </p>
+
+  <p>
+    Credit Card Number <br>
+    <input type="text" name="cardnumber" maxlength="40" size="70%">
+  </p>
+
+  <p>
+    Expiration Date <br>
+    <input type="text" name="carddate" maxlength="14" size="40%" placeholder="mm/dd/yyyy">
+
+  </p>
+</div>
+
+<h2> Confirm Order </h2>
+<button type="reset" value="Reset">Reset</button>
+  <input class="buttonsize" type="submit" value="Submit">  </button>
+<hr>
+<p> Ori Wiegner </p>
+</div> <!-- end container div -->
+</form>
+</body>
+</html>
